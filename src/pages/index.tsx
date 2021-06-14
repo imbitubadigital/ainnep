@@ -1,27 +1,39 @@
-import { useState } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
-import Logo from '../assets/avatar.png'
-import Animal from '../assets/animal.svg'
+
+import { Header } from '../components/Header'
+import { Welcome } from '../components/Welcome'
+import { InitialPosts } from '../components/InitialPosts'
+import { ServicesCards } from '../components/ServicesCards'
+import { RegistrationAction } from '../components/RegistrationAction'
+import { Presentation } from '../components/Presentation'
+import { Professional } from '../components/Professional'
+import { Company } from '../components/Company'
+import { Footer } from '../components/Footer'
+
 import * as S from '../styles/pages/home'
-
+import { ThemeSwitcher } from '../components/ThemeSwitcher'
 const Home: React.FC = () => {
-  const [teste] = useState('Setup do Projeto')
   return (
-    <S.Container>
+    <>
       <Head>
-        <title>Página Home</title>
+        <title>Ainnep</title>
       </Head>
-      <S.Content>
-        <Image src={Logo} alt="teste" width={200} height={200} />
-        <h1>{teste}</h1>
-        <S.WrapperSvg>
-          <Animal />
-        </S.WrapperSvg>
+      <S.Container>
+        <Header />
+        <Welcome />
+        <InitialPosts />
+        <ServicesCards />
+        <RegistrationAction />
+        <Presentation />
 
-        <p>Estrutura inicial com Next JS 10</p>
-      </S.Content>
-    </S.Container>
+        <Professional />
+
+        <Company />
+
+        {/* <ThemeSwitcher /> */}
+        <Footer />
+      </S.Container>
+    </>
   )
 }
 
