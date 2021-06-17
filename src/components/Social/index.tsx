@@ -1,14 +1,14 @@
 import * as S from './styles'
 import Link from 'next/link'
-import { FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa'
-import Image from 'next/image'
+import { FaTwitter, FaInstagram, FaYoutube, FaBoxOpen } from 'react-icons/fa'
 
-export function Social(): JSX.Element {
+import { PropsSocial } from './interface'
+export function Social({ isBottom = false }: PropsSocial): JSX.Element {
   return (
-    <S.Container>
+    <S.Container isBottom={isBottom}>
       <Link href="/">
         <a>
-          <Image src="/donation.svg" alt="Doação" width={32} height={32} />
+          <FaBoxOpen size={26} />
         </a>
       </Link>
       <Link href="/">

@@ -8,14 +8,25 @@ import { RegistrationAction } from '../components/RegistrationAction'
 import { Presentation } from '../components/Presentation'
 import { Professional } from '../components/Professional'
 import { Company } from '../components/Company'
-import { Footer } from '../components/Footer'
-
 import * as S from '../styles/pages/home'
 import { ThemeSwitcher } from '../components/ThemeSwitcher'
+import { TemplateSite } from '../components/_templates/Site'
 const Home: React.FC = () => {
   return (
     <>
-      <Head>
+      <TemplateSite>
+        <Head>
+          <title>Ainnep</title>
+        </Head>
+        <Welcome />
+        <InitialPosts />
+        <ServicesCards />
+        <RegistrationAction />
+        <Presentation />
+        <Professional />
+        <Company />
+      </TemplateSite>
+      {/* <Head>
         <title>Ainnep</title>
       </Head>
       <S.Container>
@@ -30,9 +41,9 @@ const Home: React.FC = () => {
 
         <Company />
 
-        {/* <ThemeSwitcher /> */}
+        {/* <ThemeSwitcher />
         <Footer />
-      </S.Container>
+      </S.Container> */}
     </>
   )
 }

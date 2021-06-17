@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import { shade } from 'polished'
-
-export const Container = styled.div`
+interface PropsContainer {
+  isBottom: boolean
+}
+export const Container = styled.div<PropsContainer>`
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -27,5 +29,14 @@ export const Container = styled.div`
     &:hover {
       color: ${props => shade(0.1, props.theme.colors.textSecondary)};
     }
+  }
+
+  @media (max-width: 960px) {
+    background: ${props =>
+      props.isBottom ? 'transparent' : props.theme.colors.header1};
+    margin-bottom: ${props => (props.isBottom ? 0 : '90px')};
+    width: 100%;
+    justify-content: space-evenly;
+    padding: ${props => (props.isBottom ? 0 : '1rem')};
   }
 `

@@ -24,6 +24,7 @@ export function Company(): JSX.Element {
           </button>
         </S.ContentButton>
       </S.Box>
+      <S.ImageContainer />
     </S.Container>
   )
 }

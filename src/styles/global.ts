@@ -7,16 +7,21 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-
-  @media(mas-width: 1080px){
+  @media(max-width: 1366px){
     html {
-      font-size: 93.75%;
+      font-size: 76.75%;
     }
   }
 
-  @media(mas-width: 720px){
+  @media(max-width: 1080px){
     html {
-      font-size: 87.5%;
+      font-size: 70.75%;
+    }
+  }
+
+  @media(max-width: 720px){
+    html {
+      font-size: 65.5%;
     }
   }
 

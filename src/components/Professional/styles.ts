@@ -1,18 +1,47 @@
-import { Right } from './../Presentation/styles'
 import styled from 'styled-components'
 import { darken } from 'polished'
 export const Container = styled.div`
-  background-image: url('/professional.svg');
+  @media (min-width: 720px) {
+    background-image: url('/professional.svg');
+  }
+
   background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 800px;
+  background-position: left 15% top;
+  background-size: contain;
   display: flex;
   justify-content: flex-end;
+  margin-top: 5rem;
+  @media (max-width: 1366px) {
+    background-position: left 0 bottom;
+  }
+  @media (max-width: 720px) {
+    padding: 0 4rem;
+  }
+  @media (max-width: 425px) {
+    padding: 0 2rem;
+  }
 `
 export const Content = styled.div`
-  width: 720px;
-
+  width: 55%;
   padding-top: 8rem;
+
+  @media (max-width: 1366px) {
+    background-position: left 0 bottom;
+    width: 820px;
+  }
+  @media (max-width: 1080px) {
+    background-position: left 0 bottom;
+    width: 620px;
+  }
+  @media (max-width: 860px) {
+    background-position: left 0 bottom;
+    padding-top: 0rem;
+    width: 420px;
+  }
+  @media (max-width: 720px) {
+    width: 100%;
+    margin: 0 auto;
+  }
 `
 export const Box = styled.div`
   background: ${props => props.theme.colors.primary};
@@ -21,7 +50,8 @@ export const Box = styled.div`
 export const ContentBox = styled.div`
   width: 100%;
   max-width: 700px;
-  padding: 2rem 4rem;
+  // max-width: 700px;
+  padding: 4rem;
   h6,
   p {
     font-weight: 900;
@@ -30,6 +60,9 @@ export const ContentBox = styled.div`
   }
   h6 {
     margin-bottom: 1rem;
+  }
+  @media (max-width: 720px) {
+    padding: 2rem;
   }
 `
 export const ContentButton = styled.div`

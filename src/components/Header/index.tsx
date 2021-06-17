@@ -3,10 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Social } from '../Social'
 import { Navbar } from '../Navbar'
-
-// import {} from './interfaces';
+import { ToggleMobile } from '../ToggleMobile'
+import { useState } from 'react'
 
 export function Header(): JSX.Element {
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <S.Container>
       <S.Content>
@@ -21,8 +22,11 @@ export function Header(): JSX.Element {
               />
             </a>
           </Link>
-          <Navbar />
-          <Social />
+          <S.Menu isOpen={isOpen}>
+            <Navbar />
+            <Social />
+          </S.Menu>
+          <ToggleMobile isOpen={isOpen} setIsOpen={setIsOpen} />
         </S.Top>
         <S.Bottom>
           <h2>

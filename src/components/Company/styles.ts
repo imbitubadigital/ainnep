@@ -2,28 +2,32 @@ import { lighten } from 'polished'
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background-image: url('/company.svg');
-  background-repeat: no-repeat;
-  background-position: bottom right -100px;
-  background-size: 800px;
   display: flex;
   justify-content: flex-start;
-  margin-top: 8rem;
+  align-items: stretch;
+  margin-top: 6rem;
+  @media (max-width: 720px) {
+    margin-top: 4rem;
+  }
 `
 
 export const Box = styled.div`
   background: ${props => props.theme.colors.primary};
-  padding: 2rem 3rem;
-  width: 100%;
-  max-width: 650px;
+  padding: 3rem;
+  width: 50%;
+
   text-align: center;
-  margin-left: 2rem;
+  margin-left: 4%;
   h6,
   p {
     font-weight: 900;
     color: ${props => props.theme.colors.textSecondary};
     font-size: ${props => props.theme.typography.subtitle1.size};
     margin-bottom: 1rem;
+  }
+
+  @media (max-width: 720px) {
+    width: 100%;
   }
 `
 
@@ -60,5 +64,20 @@ export const ContentButton = styled.div`
     &:hover {
       background: ${props => lighten(0.2, props.theme.colors.primary)};
     }
+  }
+`
+
+export const ImageContainer = styled.div`
+  flex: 1;
+  background-image: url('/company.svg');
+  background-repeat: no-repeat;
+  background-position: bottom left -30px;
+  background-size: contain;
+
+  @media (max-width: 1700px) {
+    background-size: cover;
+  }
+  @media (max-width: 425px) {
+    display: none;
   }
 `

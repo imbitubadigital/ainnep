@@ -10,10 +10,51 @@ export const Container = styled.div`
 
   display: flex;
   justify-content: space-between;
+  // flex-wrap: nowrap;
   align-items: center;
-  padding: 1rem 2rem;
-  margin-top: 8rem;
+  padding: 2rem;
+  margin-top: 6rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
 `
+export const ContentLeft = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 48%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 270px) {
+    margin-left: 2rem;
+  }
+
+  @media (max-width: 425px) {
+    flex-direction: column-reverse;
+    div {
+      margin: 0;
+      margin-top: 3rem;
+    }
+  }
+`
+export const ContentRight = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 48%;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
+`
+
 export const Infos = styled.ul`
   list-style: none;
   margin: 1rem 2rem;
@@ -32,6 +73,10 @@ export const Infos = styled.ul`
       display: block;
       font-weight: 400;
     }
+  }
+
+  @media (max-width: 425px) {
+    margin: 0;
   }
 `
 export const BoxButton = styled.div`
@@ -77,5 +122,8 @@ export const BoxButton = styled.div`
     font-weight: 700;
     font-size: ${props => props.theme.typography.body1.size};
     text-align: center;
+    @media (max-width: 720px) {
+      margin-bottom: 2rem;
+    }
   }
 `

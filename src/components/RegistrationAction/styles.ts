@@ -2,17 +2,24 @@ import { darken } from 'polished'
 import styled from 'styled-components'
 export const Container = styled.div`
   width: 100%;
-  max-width: 1280px;
-  margin: 4rem auto;
-  padding: 4rem 1rem;
+  margin: 6rem auto 0;
+
+  padding: 0 4rem;
+  max-width: 1380px;
+  @media (max-width: 1366px) {
+    max-width: 1200px;
+  }
+  @media (max-width: 425px) {
+    max-width: 1200px;
+    padding: 0 2rem;
+  }
+`
+export const Content = styled.div`
+  width: 100%;
   background: ${props => props.theme.colors.backgroundSecondary};
   text-align: center;
   border-radius: 10px;
-`
-export const Content = styled.div`
-  margin: 0 auto;
-  width: 100%;
-  max-width: 400px;
+  padding: 4rem;
 
   h4 {
     font-weight: 900;

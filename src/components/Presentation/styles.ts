@@ -1,16 +1,39 @@
 import { lighten } from 'polished'
 import styled from 'styled-components'
 export const Container = styled.div`
-  width: 100%;
-  max-width: 1280px;
-  margin: 4rem auto;
-  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  width: 100%;
+  max-width: 1380px;
+  margin: 5rem auto 0;
+  padding: 0 4rem;
+  flex-wrap: nowrap;
+  @media (max-width: 1366px) {
+    max-width: 1200px;
+  }
+
+  @media (max-width: 960px) {
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 425px) {
+    padding: 0 2rem;
+  }
 `
 export const Left = styled.div`
-  flex-basis: 35%;
+  flex-basis: 32%;
+  margin-right: 2rem;
+
+  @media (max-width: 960px) {
+    margin-right: 0;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 `
 
 interface PropsChecked {
@@ -51,12 +74,28 @@ export const Item = styled.button<PropsChecked>`
       color: ${props => props.theme.colors.textPrimary};
     }
   }
+  @media (max-width: 960px) {
+    flex-basis: 45%;
+    margin-right: 0;
+  }
+
+  @media (max-width: 720px) {
+    p {
+      display: none;
+    }
+  }
+  @media (max-width: 320px) {
+    flex-basis: 100%;
+  }
 `
 export const Right = styled.div`
   flex: 1;
   background: ${props => props.theme.colors.backgroundSecondary};
   padding: 1rem;
   border-radius: 8px;
+  @media (max-width: 960px) {
+    flex-basis: 100%;
+  }
 `
 export const ContentRight = styled.div`
   background: ${props => props.theme.colors.background};

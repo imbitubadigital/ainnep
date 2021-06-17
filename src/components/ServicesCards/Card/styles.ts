@@ -20,6 +20,11 @@ export const Container = styled.article`
     -webkit-box-shadow: 0 15px 15px rgba(0, 0, 0, 0.6);
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.6);
   }
+
+  @media (max-width: 1080px) {
+    padding: 2rem;
+    margin: 2rem 0;
+  }
 `
 export const Content = styled.div`
   Header {
@@ -39,6 +44,18 @@ export const Content = styled.div`
       color: ${props => props.theme.colors.primaryDark};
       font-weight: 400;
       text-align: left;
+    }
+    @media (max-width: 804px) {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      h3 {
+        margin-left: 0;
+      }
+      p {
+        margin: 0;
+      }
     }
   }
 `
