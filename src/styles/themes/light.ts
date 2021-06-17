@@ -27,7 +27,7 @@ export default {
     },
     subtitle1: {
       size: '1.625rem', // 26
-      lineWeight: '2rem' // 32
+      lineWeight: '2.3rem' // 32
     },
     subtitle2: {
       size: '1.5rem', // 24
@@ -35,23 +35,12 @@ export default {
     },
     body1: {
       size: '1.25rem', // 20
-      lineWeight: '1.5rem' // 24
+      lineWeight: '1.8rem' // 24
     },
     body2: {
       size: '1.125rem', // 18
-      lineWeight: '1.375rem' // 22
+      lineWeight: '1.675rem' // 22
     }
-
-    // caption: {
-    //   size: RFValue(12, standardScreenHeight),
-    //   lineWeight: RFValue(18, standardScreenHeight),
-    //   weight: 500,
-    // },
-    // overline: {
-    //   size: RFValue(10, standardScreenHeight),
-    //   lineWeight: RFValue(16, standardScreenHeight),
-    //   weight: 500,
-    // },
   },
 
   colors: {
@@ -62,25 +51,10 @@ export default {
     secondaryDark: '#46436F',
     background: '#FFFFFF',
     backgroundSecondary: '#F2F2F2',
-    // error: '#FA2D00',
-    // success: '#34C759',
-    // info: '#72D0FC',
-    // warning: '#FFCD46',
-
     textPrimary: '#3F3D56',
 
     textSecondary: '#FFFFFF',
-    // divider: '#B8B8B8',
 
-    // buttonsPrimary: '#318FBA',
-    // buttonsSecondary: '#003580',
-    // buttonsDisabled: '#B8B8B8',
-
-    // inputBackground: '#EDF1F6',
-    // inputBorder: '#318FBA',
-    // inputPlaceholder: '#666666',
-    // inputText: '#2B5A9D',
-    // inputDisabled: '#E4E7EB',
     header1: '#5330C5',
     header2: '#685AF5'
   }

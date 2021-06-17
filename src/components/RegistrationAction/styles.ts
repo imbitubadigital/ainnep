@@ -25,7 +25,7 @@ export const Content = styled.div`
     font-weight: 900;
     color: ${props => props.theme.colors.primaryDark};
     font-size: ${props => props.theme.typography.h3.size};
-    line-height: ${props => props.theme.typography.h3.size};
+    line-height: ${props => props.theme.typography.h3.lineWeight};
     margin-bottom: 1rem;
   }
 
@@ -33,7 +33,7 @@ export const Content = styled.div`
     font-weight: 700;
     color: ${props => props.theme.colors.textPrimary};
     font-size: ${props => props.theme.typography.body1.size};
-    line-height: ${props => props.theme.typography.body1.size};
+    line-height: ${props => props.theme.typography.body1.lineWeight};
     transition: color 0.3s;
 
     &:hover {

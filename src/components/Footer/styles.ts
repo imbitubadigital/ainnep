@@ -10,7 +10,6 @@ export const Container = styled.div`
 
   display: flex;
   justify-content: space-between;
-  // flex-wrap: nowrap;
   align-items: center;
   padding: 2rem;
   margin-top: 6rem;

@@ -33,14 +33,14 @@ export const Content = styled.div`
     h3 {
       font-weight: 700;
       font-size: ${props => props.theme.typography.subtitle1.size};
-      line-height: ${props => props.theme.typography.subtitle1.size};
+      line-height: ${props => props.theme.typography.subtitle1.lineWeight};
       color: ${props => props.theme.colors.primaryDark};
       text-align: left;
       margin-bottom: 1rem;
     }
     p {
       font-size: ${props => props.theme.typography.body2.size};
-      line-height: ${props => props.theme.typography.body2.size};
+      line-height: ${props => props.theme.typography.body2.lineWeight};
       color: ${props => props.theme.colors.primaryDark};
       font-weight: 400;
       text-align: left;

@@ -55,15 +55,22 @@ export const Item = styled.button<PropsChecked>`
   p {
     transition: all 0.3s;
     text-align: left;
-    font-weight: 700;
+
     font-size: ${props => props.theme.typography.body2.size};
+
     color: ${props =>
       props.checked
         ? props.theme.colors.background
         : props.theme.colors.textPrimary};
   }
   h5 {
+    margin-bottom: 1rem;
+    font-weight: 900;
+  }
+  p {
     margin-bottom: 0.5rem;
+    line-height: ${props => props.theme.typography.body2.lineWeight};
+    font-weight: 700;
   }
 
   &:hover {
@@ -80,6 +87,9 @@ export const Item = styled.button<PropsChecked>`
   }
 
   @media (max-width: 720px) {
+    h5 {
+      margin-bottom: 0;
+    }
     p {
       display: none;
     }

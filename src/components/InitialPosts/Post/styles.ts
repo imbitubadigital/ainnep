@@ -16,7 +16,7 @@ export const ContentLeft = styled.div`
   h3 {
     font-weight: 700;
     font-size: ${props => props.theme.typography.h2.size};
-    line-height: ${props => props.theme.typography.h2.size};
+    line-height: ${props => props.theme.typography.h2.lineWeight};
     color: ${props => props.theme.colors.textPrimary};
   }
   @media (max-width: 720px) {
@@ -30,7 +30,7 @@ export const ContentRight = styled.div`
   p {
     font-weight: 700;
     font-size: ${props => props.theme.typography.body1.size};
-    line-height: ${props => props.theme.typography.body1.size};
+    line-height: ${props => props.theme.typography.body1.lineWeight};
     color: ${props => props.theme.colors.textPrimary};
   }
   @media (max-width: 720px) {

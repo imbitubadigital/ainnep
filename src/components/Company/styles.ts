@@ -16,18 +16,27 @@ export const Box = styled.div`
   padding: 3rem;
   width: 50%;
 
-  text-align: center;
   margin-left: 4%;
   h6,
   p {
-    font-weight: 900;
     color: ${props => props.theme.colors.textSecondary};
     font-size: ${props => props.theme.typography.subtitle1.size};
     margin-bottom: 1rem;
   }
 
+  h6 {
+    font-weight: 900;
+  }
+  p {
+    align-items: left;
+    font-weight: 700;
+    line-height: ${props => props.theme.typography.subtitle1.lineWeight};
+  }
+
   @media (max-width: 720px) {
     width: 100%;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 `
 

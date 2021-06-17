@@ -54,12 +54,16 @@ export const ContentBox = styled.div`
   padding: 4rem;
   h6,
   p {
-    font-weight: 900;
     color: ${props => props.theme.colors.textSecondary};
     font-size: ${props => props.theme.typography.subtitle1.size};
   }
   h6 {
     margin-bottom: 1rem;
+    font-weight: 900;
+  }
+  p {
+    line-height: ${props => props.theme.typography.subtitle1.lineWeight};
+    font-weight: 700;
   }
   @media (max-width: 720px) {
     padding: 2rem;
